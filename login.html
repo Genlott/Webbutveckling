@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="login.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logga in</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="login.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Profil - Logga in här</title>
 </head>
 <body>
-    <form action="action_page.php" method="post">
-        <div class="imgcontainer">
-          <img src="Profilbild.jpg" alt="Avatar" class="avatar">
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="row">
+        <h2 style="text-align:center">Logga in med Sociala Medier eller Manuellt</h2>
+        <div class="vl">
+          <span class="vl-innertext"></span>
         </div>
-      
-        <div class="container">
-          <label for="uname"><b>Användarnamn</b></label>
-          <input type="text" placeholder="Skriv användarnamn" name="uname" required>
-      
-          <label for="psw"><b>Lösenord</b></label>
-          <input type="password" placeholder="Skriv lösenord" name="psw" required>
-      
-          <button type="submit">Logga in</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
-          </label>
+  
+        <div class="col">
+          <a href="#" class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i> Logga in med Facebook
+          </a>
+          <a href="#" class="twitter btn">
+            <i class="fa fa-twitter fa-fw"></i> Logga in med Twitter
+          </a>
+          <a href="#" class="google btn">
+            <i class="fa fa-google fa-fw"></i> Logga in med Google+
+          </a>
         </div>
-      
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="cancelbtn">Avbryt</button>
-          <span class="psw">Glömt <a href="index.html">lösenord?</a></span>
+  
+        <div class="col">
+          <div class="hide-md-lg">
+            <p>Eller logga in manuellt:</p>
+          </div>
+  
+          <input type="text" name="username" placeholder="Användarnamn" required>
+          <input type="password" name="password" placeholder="Lösenord" required>
+          <input type="submit" value="Logga in">
         </div>
-      </form>
+  
+      </div>
+    </form>
+  </div>
+  
+  <div class="bottom-container">
+    <div class="row">
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Bli medlem</a>
+      </div>
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Glömt lösenord?</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

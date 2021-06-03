@@ -1,0 +1,69 @@
+/* Stil för rubrikerna för varje punkt*/
+label {
+    font-family: poppins;
+    font-size: 18px;
+}
+
+/* Stil för input texten, dvs där man skriver */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    font-family: poppins;
+    font-size: 15px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+  /* Stil för skicka knappen, bakgrund och texten*/
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    font-family: poppins;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Animation för när man håller över Skicka knappen */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Stil för skicka knappen, bakgrund och texten*/
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    font-family: poppins;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Animation för när man håller över Skicka knappen */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Lägger till en bakgrund och en padding runt om*/
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+    /*Responsiv när den är mindre än 800px bred*/
+  @media screen and (max-width: 800px) {
+    .col-25, 
+    .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

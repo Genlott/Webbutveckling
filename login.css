@@ -1,71 +1,105 @@
-/* Border */
-form {
-    border: 3px solid #f1f1f1;
-  }
-  
-  /* Bredd för inputs */
-  input[type=text], input[type=password] {
+* {box-sizing: border-box}
+
+/* Stil för bakgrunden */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+}
+
+/* Stil för input och länkar för knapparna*/
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; 
+}
+
+/* Ändrar färgerna för Facebook, Twitter och Google knapparna*/
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* Stil för logga in knappen*/
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Två kolumner */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Tar bort floats efter kolumnerna*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Vertikal linje*/
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* Gömmer lite text på medel och stora skärmar */
+.hide-md-lg {
+  display: none;
+}
+
+/* Bakgrund där nere */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsiv sida för skärmar mindre än 800px*/
+@media screen and (max-width: 800px) {
+  .col {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    margin-top: 0;
   }
-  
-  /* Detta ändrar stilerna för alla knappar */
-  button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  /* Samma här, gömmer den vertikala linjen */
+  .vl {
+    display: none;
   }
-  
-  /* Animation */
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Ändrar avbryta knappen */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
-  /* Centrerar profilbilden*/
-  .imgcontainer {
+  /* Visar texten på små skärmar */
+  .hide-md-lg {
+    display: block;
     text-align: center;
-    margin: 24px 0 12px 0;
   }
-  
-  /* Profilbild */
-  img.avatar {
-    width: 19%;
-    border-radius: 50%;
-  }
-  
-  /* Add padding to containers */
-  .container {
-    padding: 16px;
-  }
-  
-  /* Detta är glömt lösenord text */
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
-  /* Ändrar stiler för små skärmar */
-  @media screen and (max-width: 800px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
-  }
+}

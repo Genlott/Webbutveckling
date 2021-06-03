@@ -114,7 +114,7 @@ nav a::before {
 	position: relative;
 	top: 450px;
 	background: #ebebeb;
-	height: 950px;
+	height: 900px;
 }
 
 /* Ändra texten i mitten */
@@ -136,7 +136,7 @@ nav a::before {
 .card {
 	position: absolute; 
     flex-direction: column; 
-    top: 425px; 
+    top: 395px; 
     left: 100px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
     max-width: 300px; 
@@ -188,7 +188,7 @@ nav a::before {
   .card3 {
 	position: absolute; 
       flex-direction: column; 
-      top: 425px; 
+      top: 395px; 
       right: 100px; 
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
       max-width: 300px; 
@@ -210,7 +210,7 @@ nav a::before {
 	width: 100%;
 	font-size: 18px;
   }
-
+  
   /* Detta hanterar vilken färg och hurt stort det ska vara på texten */
   .price {
 	color: grey;
