@@ -1,4 +1,6 @@
-* {
+* 
+/*Gör så att all text och boxar typ allt på sidan går ut hela vägen*/
+{
 	margin: 0;
 	padding: 0;
 }
@@ -132,7 +134,7 @@ nav a::before {
 	line-height: 30px;
 }
 
-  /* Detta hanterar vilken färg och hurt stort det ska vara på texten */
+  /* Responsiv sida för skärmar mindre än 800px i bredd */
   @media screen and (max-width: 800px) {
     .navbar a {
       float: none;

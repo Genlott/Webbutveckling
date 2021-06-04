@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <!--Länkar ihop html med css, dvs Kontakt.html = Kontakt.css-->
     <link rel="stylesheet" href="Kontakt.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kundtjänst - Kontakta oss</title>
-</head>
-<body>
-    <div class="container">
-        <form action="action_page.php">
-          <h2>Kundstjänst!</h2>
-          <label for="fname">Förnamn:</label>
-          <input type="text" id="fname" name="firstname" placeholder="Ditt namn..">
-      
-          <label for="lname">Efternamn:</label>
-          <input type="text" id="lname" name="lastname" placeholder="Ditt efternamn..">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Denna länk gör att vi kan använda dem ikoner som finns till vänster av sidan-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Ändrar titeln på sidan-->
+   <title>Kundtjänst - Kontakta oss</title>
+    </head>
+     <body>
+   <!--Här börjar själva kontakt formuläret, där bland annat text längst upp är-->
+         <section id="contact-section">
+           <div class="container">
+           	 <h2>Kontakta Oss</h2>
+              <p>Maila oss om du har några frågor om vår verksamhet</p>
+             <div class="contact-form">
+                  <!--Text och ikoner till vänster, bland annat telefonnummer och så vidare -->
+               <div>
+                  <!--i class="..." är det som skapar en ikon.-->
+                 <i class="fa fa-map-marker"></i><span class="form-info">  Hälsingegatan 49, 113 31 Stockholm</span><br>
+                 <i class="fa fa-phone" > </i><span class="form-info">  Telefonnummer</span><br>
+                 <i class="fa fa-envelope"></i><span class="form-info">  Smarti@Gmail.com</span>
+               </div>
+                <!--Det är här man kan skriva vad man vill veta om oss, dvs själva kontakt formuläret.-->
+           <div>        
+             <form>
+               <!--Input type gör så att man kan skriva och placeholder är det som står-->
+               <input type="text" placeholder="Förnamn" required>
+               <input type="text" placeholder="Efternamn"><br>
+               <input type="Email" placeholder="Email" required><br>
+               <input type="text" placeholder="Ämne"><br>
+               <!--Text area är ungefär likadant som input type men att man kan skriva mycket mera-->
+               <textarea name="message" placeholder="Meddelande" rows="5" required></textarea><br>
+               <!--Skapar en knapp som gör att man kan skicka meddelandet.-->
+               <button class="submit">Skicka meddelande</button> 
+               <a href="index.html" class="submit">Tillbaka</a>
+             </form>   
 
-          <label for="subject">Ämne:</label>
-          <textarea id="subject" name="subject" placeholder="Skriv något.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Skicka">
-          <input type="submit" value="Avbryt">
-          
-        </form>
-      </div>
-</body>
-</html>
+           </div>
+         </section>
+     </body>
+    </html>

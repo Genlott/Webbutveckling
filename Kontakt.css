@@ -1,69 +1,139 @@
-/* Stil för rubrikerna för varje punkt*/
-label {
-    font-family: poppins;
-    font-size: 18px;
-}
+   /* Gör så att nästan allt på skrämen går ut till sidan slut, plus ändrar även textstil */
+  body {
+   padding: 0px;
+   margin: 0px;  
+   font-family: sans-serif;
+ }   
 
-/* Stil för input texten, dvs där man skriver */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    font-family: poppins;
-    font-size: 15px;
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical 
-  }
-  
-  /* Stil för skicka knappen, bakgrund och texten*/
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    font-family: poppins;
-    font-size: 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* Animation för när man håller över Skicka knappen */
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-
-  /* Stil för skicka knappen, bakgrund och texten*/
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    font-family: poppins;
-    font-size: 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* Animation för när man håller över Skicka knappen */
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-
-  /* Lägger till en bakgrund och en padding runt om*/
+/* Samma sak här fast istället för ut till sidorna går dem ut över och under också */
   .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
   }
 
-    /*Responsiv när den är mindre än 800px bred*/
-  @media screen and (max-width: 800px) {
-    .col-25, 
-    .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
+  /* Detta ändrar bakgrunden, som finns på sidan. Ändrar färg, size, positions och lite mer */
+  #contact-section {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url(Index.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100% ;
+    padding-bottom: 12%;
   }
+
+  /* Ändrar rubriken som är längst upp. Ändrar positions, färg, textstil och lite mer */
+  #contact-section .container h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;  
+  }
+
+ /* Ändrar den text som är under rubriken som är längst upp. Ändrar positions, färg, textstil och lite mer */
+  #contact-section .container p {
+    text-align: center; 
+    width: 70%; 
+    margin-left: auto;
+    margin-right: auto; 
+    padding-bottom: 3%;
+    color: #fff;
+    letter-spacing:3px;
+  }
+
+  /* Detta ändrar den text och ikoner som finns till vänster. Ändrar positions, färg och lite mer */
+  .contact-form i.fa {
+    font-size: 22px; 
+    padding: 3%;
+    background-color: none;
+    border-radius: 80%;
+    margin: 2%;
+    cursor: pointer;
+    border:2px solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+  }
+    
+  .form-info {
+    font-size: 16px;
+    font-style: italic;
+    color: white;
+    letter-spacing: 2px;
+  }
+
+  /* Detta gör en grid så att texten och ikonerna och kontakt forumläret är brevid varandra och inte under varandra */
+  .contact-form {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+    
+  /* Här börjar sjävla kontakt formuläret. Ändrar färg, position, border och lite mera */
+  input {
+    padding: 10px;
+    margin:10px;
+    width: 70%;
+    background-color:rgba(136, 133, 133, 0.5);
+    color: white;
+    border: none;
+    outline:none;
+  }
+
+  /* Ändrar färg som står inuti kontakt formuläret */
+  input::placeholder {
+    color: white;
+  }
+  
+  /* Ändrar färg som står inuti kontakt formuläret */
+  textarea {
+    padding: 10px;
+    margin: 10px;     
+    width: 70%;
+    background-color:rgba(136, 133, 133, 0.5);
+    color: white;
+    border: none;
+    outline:none;
+  }
+  
+  /* Samma sak här fast istället ändrar meddelandet och färgen där */
+  textarea::placeholder { 
+    color: white;
+  }
+   
+  /* Här kan man ändra färg för skicka knappen. Ändrar positions, textstil, hur stort, färg och mer */
+  .submit {
+    width: 40%;
+    background: none;
+    padding: 4px;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 33px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-left: 3%;
+    border:2px solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+   }
+
+  /* Här kan man ändra färg för skicka knappen. Ändrar positions, textstil, hur stort, färg och mer */
+  .submit:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+   }
+
+  /* Responsiv sida för skärmar mindre än 800px i bredd */ 
+  @media (max-width: 800px) {
+
+#contact-section .contact-form {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    #contact-section .submit {
+      width: 60%;
+    }
+}

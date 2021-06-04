@@ -2,56 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!--Länkar ihop html med css, dvs Login.html = Login.css-->
   <link rel="stylesheet" href="login.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Profil - Logga in här</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!--Ändrar titeln på sidan-->
+  <title>Inloggning - Logga in här</title>
 </head>
 <body>
-  <div class="container">
-    <form action="/action_page.php">
-      <div class="row">
-        <h2 style="text-align:center">Logga in med Sociala Medier eller Manuellt</h2>
-        <div class="vl">
-          <span class="vl-innertext"></span>
-        </div>
-  
-        <div class="col">
-          <a href="#" class="fb btn">
-            <i class="fa fa-facebook fa-fw"></i> Logga in med Facebook
-          </a>
-          <a href="#" class="twitter btn">
-            <i class="fa fa-twitter fa-fw"></i> Logga in med Twitter
-          </a>
-          <a href="#" class="google btn">
-            <i class="fa fa-google fa-fw"></i> Logga in med Google+
-          </a>
-        </div>
-  
-        <div class="col">
-          <div class="hide-md-lg">
-            <p>Eller logga in manuellt:</p>
-          </div>
-  
-          <input type="text" name="username" placeholder="Användarnamn" required>
-          <input type="password" name="password" placeholder="Lösenord" required>
-          <input type="submit" value="Logga in">
-        </div>
-  
+  <!--Detta är en class vilken gör att man kan ändra det som står under class i css-->
+  <div class="login-wrapper">
+    <form action="" class="form">
+      <!--Lägger till en profilbild-->
+      <img src="Profilbild.png" alt="">
+      <h2>Logga in</h2>
+      <!--Detta skapar en input type, vilket gör att man kan skriva i en ruta-->
+      <div class="input-group">
+        <input type="text" name="loginUser" id="loginUser" required>
+         <!--LoginUser är det som gör att man kan "logga in" och användernamn är det som står på sidan-->
+        <label for="loginUser">Användarnamn</label>
       </div>
+       <!--Detta skapar en input type, vilket gör att man kan skriva i en ruta-->
+      <div class="input-group">
+        <input type="password" name="loginPassword" id="loginPassword" required>
+        <!--Samma sak här fast med lösenord istälet.-->
+        <label for="loginPassword">Lösenord</label>
+      </div>
+      <!--Här skapar vi en knapp där det står Login och sedan skapas även en tillbaka knapp-->
+      <input type="submit" value="Logga in" class="submit-btn">
+      <a href="index.html" class="tillbaka">Tillbaka</a>
     </form>
-  </div>
-  
-  <div class="bottom-container">
-    <div class="row">
-      <div class="col">
-        <a href="#" style="color:white" class="btn">Bli medlem</a>
-      </div>
-      <div class="col">
-        <a href="#" style="color:white" class="btn">Glömt lösenord?</a>
-      </div>
-    </div>
-  </div>
 </body>
 </html>

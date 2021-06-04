@@ -1,4 +1,6 @@
-* {
+* 
+/*Gör så att all text och boxar typ allt på sidan går ut hela vägen*/
+{
 	margin: 0;
 	padding: 0;
 }
@@ -221,7 +223,7 @@ nav a::before {
 	opacity: 0.7;
   }
 
-  /* Media screen är den som är högst upp, och det är här du gör så att sidan blir responsiv*/
+  /* Responsiv sida för skärmar mindre än 800px i bredd */
   @media screen and (max-width: 800px) {
     .navbar a {
       float: none;

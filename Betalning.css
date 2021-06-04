@@ -73,8 +73,19 @@
     float: right;
     color: grey;
   }
+
+  .til {
+    float: left;
+    margin: auto;
+    padding: 0 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-family: poppins;
+    background-color: red;
+  }
   
-  
+  /* Responsiv sida för skärmar mindre än 800px i bredd */
   @media (max-width: 800px) {
     .row {
       flex-direction: column-reverse;

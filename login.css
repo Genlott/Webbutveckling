@@ -1,105 +1,111 @@
-* {box-sizing: border-box}
+* 
+ /* Är inte helt hundra men tror detta fixar lite hur stor rutan i mitten är */
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Stil för bakgrunden */
-.container {
+ /* Bakgrunds stil, vilken bild och vilken stil på bakgrunden */
+body {
+  background: url('Bakgrund.jpg') no-repeat center;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+/* Allt som är i mitten dvs själva logga in rutan och det ändras. Positions och andra */
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ändraar bakgrunden för rutan i mitten, även vilken färg på texten, hur stor den ska vara osv. Även en shadow för rutan*/
+.form {
   position: relative;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px 0 30px 0;
-}
-
-/* Stil för input och länkar för knapparna*/
-input,
-.btn {
   width: 100%;
-  padding: 12px;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+/* Här kan du ändra på profilbilden, postions och färg osv */
+.form img {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  width: 100px;
+  background: rgba(255,255,255, 0.8);
+  border-radius: 50%;
+}
+
+/* Ändrar rubriken på rutan, dvs logga in. Ändra färg och postions plus textstil */
+.form h2 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: #ff652f;
+}
+
+/* Ändrar dem små rubrikerna, dvs användarnamn och lösenord */
+.form .input-group {
+  position: relative;
+}
+
+/* Här kan du ändra input texten, färg och positions. Även bakgrunds färg och textstil */
+.form .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
   border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
-  text-decoration: none; 
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
 }
 
-/* Ändrar färgerna för Facebook, Twitter och Google knapparna*/
-.fb {
-  background-color: #3B5998;
-  color: white;
+/* Vet kanske inte exakt vad denna gör men den ändrar iallafall lite mera på label och input group */
+.form .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .3s ease-out;
 }
 
-.twitter {
-  background-color: #55ACEE;
-  color: white;
+/* Ändrar en animation som händer när man klickar på lösenord och användarnamn */
+.form .input-group input:focus + label,
+.form .input-group input:valid + label {
+  transform: translateY(-18px);
+  color: #ff652f;
+  font-size: .8rem;
 }
 
-.google {
-  background-color: #dd4b39;
-  color: white;
-}
-
-/* Stil för logga in knappen*/
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
+/* Ändrar logga in knappen, ändrar positions, färg, texstil och andra saker */
+.submit-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: #ff652f;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Två kolumner */
-.col {
-  float: left;
-  width: 50%;
-  margin: auto;
-  padding: 0 50px;
-  margin-top: 6px;
-}
-
-/* Tar bort floats efter kolumnerna*/
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Vertikal linje*/
-.vl {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  border: 2px solid #ddd;
-  height: 175px;
-}
-
-/* Gömmer lite text på medel och stora skärmar */
-.hide-md-lg {
-  display: none;
-}
-
-/* Bakgrund där nere */
-.bottom-container {
-  text-align: center;
-  background-color: #666;
-  border-radius: 0px 0px 4px 4px;
-}
-
-/* Responsiv sida för skärmar mindre än 800px*/
-@media screen and (max-width: 800px) {
-  .col {
-    width: 100%;
-    margin-top: 0;
-  }
-  /* Samma här, gömmer den vertikala linjen */
-  .vl {
-    display: none;
-  }
-  /* Visar texten på små skärmar */
-  .hide-md-lg {
-    display: block;
-    text-align: center;
-  }
+/* Detta ändrar på tillbaka knappen */
+.tillbaka {
+  color: inherit;
 }
